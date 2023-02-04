@@ -28,8 +28,8 @@
           <td><%=user.getLastName() %></td>
           <td><%=user.getGender() %></td>
           <td><%=user.getAge() %></td>
-          <td><a href="">update</a></td>
-          <td><a href="">delete</a></td>
+          <td><a href="/update/<%=user.getUserId()%>">update</a></td>
+          <td><a href="/delete/<%=user.getUserId()%>">delete</a></td>
        </tr>
        
        <% 

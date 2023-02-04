@@ -27,19 +27,42 @@ public class UserServicesImpl implements UserServices{
 
 	@Override
 	public void updateUser(User user) {
-		// TODO Auto-generated method stub
+		for(int i =0 ;i < userList.size() ; i++) {
+			if(userList.get(i).getUserId().equals(user.getUserId())) {
+				userList.get(i).setFirstName(user.getFirstName());
+				userList.get(i).setLastName(user.getLastName());
+				userList.get(i).setAge(user.getAge());
+				userList.get(i).setGender(user.getGender());
+				break;
+			}
+		}
 		
 	}
 
 	@Override
 	public void deleteUser(Integer userId) {
-		// TODO Auto-generated method stub
+		for(int i =0 ;i < userList.size() ; i++) {
+			if(userList.get(i).getUserId().equals(userId)) {
+				userList.remove(i);
+				break;
+			}
+		}
 		
 	}
 
 	@Override
 	public void saveUser(User user) {
 		userList.add(user);
+	}
+
+	@Override
+	public User getUser(Integer userId) {
+		for(int i =0 ;i < userList.size() ; i++) {
+			if(userList.get(i).getUserId().equals(userId)) {
+				return userList.get(i);
+			}
+		}
+		return null;
 	}
 
 }
