@@ -1,12 +1,11 @@
-package hibenate_inheritance_types.inheritance_object_save.entity;
+package table_per_concreate_class.example.entity;
 
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 
 @Entity
-@Table(name="cheque")
+@DiscriminatorValue(value = "cheque_pay")
 public class Cheque extends Payment {
 	
 	@Column(name="cheque_number")

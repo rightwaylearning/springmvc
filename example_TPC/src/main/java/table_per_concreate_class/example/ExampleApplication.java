@@ -1,4 +1,4 @@
-package hibenate_inheritance_types.inheritance_object_save;
+package table_per_concreate_class.example;
 
 import java.util.Date;
 
@@ -7,26 +7,26 @@ import org.hibernate.Transaction;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import hibenate_inheritance_types.inheritance_object_save.entity.Card;
-import hibenate_inheritance_types.inheritance_object_save.entity.Cheque;
-import hibenate_inheritance_types.inheritance_object_save.factory.SessionFactroyInstance;
+import table_per_concreate_class.example.entity.Card;
+import table_per_concreate_class.example.entity.Cheque;
+import table_per_concreate_class.example.factory.SessionFactroyInstance;
 
 @SpringBootApplication
-public class InheritanceObjectSaveApplication {
+public class ExampleApplication {
 
-	public static void main(String[] args) throws Exception{
-		SpringApplication.run(InheritanceObjectSaveApplication.class, args);
-	
-	  
+	public static void main(String[] args) {
+		SpringApplication.run(ExampleApplication.class, args);
+		
+
 		Card card= new Card();
-		card.setTransectioId(1234);
+		card.setTransectioId(465464);
 		card.setAmount(2345.78);
 		card.setDate(new Date().toString());
 		card.setCardNumber(435645);
 		card.setCardType("Master Card");
-//		
+		
 //		Cheque ch = new Cheque();
-//		ch.setTransectioId(65775);
+//		ch.setTransectioId(456456);
 //		ch.setAmount(34500.0);
 //		ch.setDate(new Date().toString());
 //		ch.setChequeNumber(786900);
@@ -38,7 +38,6 @@ public class InheritanceObjectSaveApplication {
 		tx.commit();
 		session.close();
 		
-	
 	}
 
 }

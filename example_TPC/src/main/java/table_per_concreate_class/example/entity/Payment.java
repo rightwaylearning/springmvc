@@ -1,4 +1,4 @@
-package hibenate_inheritance_types.inheritance_object_save.entity;
+package table_per_concreate_class.example.entity;
 
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorColumn;
@@ -10,7 +10,9 @@ import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
 @Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Table(name="payment")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="pmode", discriminatorType = DiscriminatorType.STRING,length = 20 )
 abstract public class Payment {
    
 	@Id

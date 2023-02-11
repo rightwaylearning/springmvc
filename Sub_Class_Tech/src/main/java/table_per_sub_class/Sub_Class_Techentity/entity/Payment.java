@@ -1,4 +1,4 @@
-package hibenate_inheritance_types.inheritance_object_save.entity;
+package table_per_sub_class.Sub_Class_Techentity.entity;
 
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorColumn;
@@ -10,7 +10,8 @@ import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
 @Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.JOINED)
+@Table(name="payments_data")
 abstract public class Payment {
    
 	@Id
