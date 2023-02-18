@@ -11,8 +11,10 @@ public class OneToManyApplication {
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(OneToManyApplication.class, args);
 		SaveDoctorObject obj = context.getBean(SaveDoctorObject.class);
-		//obj.createRecord();
-		obj.readDocterObject();
+		obj.createRecord();
+		//obj.readDocterObject();
+		
+		//obj.removeParentObject();
 	}
 
 }
