@@ -25,8 +25,7 @@ public class Author {
 	
 	@ManyToMany(
 			cascade = CascadeType.ALL,
-			fetch = FetchType.LAZY,
-			mappedBy = "author"
+			fetch = FetchType.LAZY
 			)
 	@JoinTable(
 			name="author_book",
